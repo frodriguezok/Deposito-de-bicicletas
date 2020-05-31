@@ -1,0 +1,40 @@
+import bicicletas.*
+import depositos.*
+test "Prueba" {
+	const bici1 = new Bicicleta()
+	bici1.rodado(28)
+	bici1.largo(150)
+	bici1.marca("Olmo")
+	
+	
+	const bici2 = new Bicicleta()
+	const canasto1 = new Canasto()
+	const morral1 = new MorralDeBici()
+	canasto1.ingresarVolumen(8)
+	morral1.largo(21)
+	morral1.poseeOjoDeGato(true)
+	bici2.rodado(26)
+	bici2.largo(110)
+	bici2.marca("Legnano")
+	bici2.instalarAccesorios(farolito)
+	bici2.instalarAccesorios(morral1)
+	bici2.instalarAccesorios(canasto1)
+	
+	const bici3 = new Bicicleta()
+	const morral2 = new MorralDeBici()
+	morral2.largo(6)
+	morral2.poseeOjoDeGato(false)
+	bici3.rodado(20)
+	bici3.largo(90)
+	bici3.marca("Legnano")
+	bici3.instalarAccesorios(morral2)
+	
+	const depo1 = new Deposito()
+	depo1.agregarBicicletas(bici1)
+	depo1.agregarBicicletas(bici2)
+	depo1.agregarBicicletas(bici3)
+	
+	assert.equals("Olmo",depo1.marcaBiciRapida())
+	assert.equals(0,depo1.cargaBicisLargas())
+	assert.equals(1,depo1.cantidadSinAccesorios())
+}
