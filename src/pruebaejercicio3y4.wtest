@@ -1,5 +1,6 @@
 import bicicletas.*
 import depositos.*
+import accesorios.*
 test "Prueba" {
 	const bici1 = new Bicicleta()
 	bici1.rodado(28)

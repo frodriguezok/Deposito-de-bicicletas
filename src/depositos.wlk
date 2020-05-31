@@ -1,4 +1,5 @@
 import bicicletas.*
+import accesorios.*
 class Deposito {
 	const bicis = []
 	method agregarBicicletas(bici){bicis.add(bici)}

@@ -1,5 +1,6 @@
 import bicicletas.*
 import depositos.*
+import accesorios.*
 test "prueba de deposito" {
 	const depo1 = new Deposito()
 	const bici1 = new Bicicleta()

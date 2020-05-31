@@ -1,3 +1,4 @@
+import accesorios.*
 class Bicicleta {
 	var property rodado
 	var property largo
@@ -22,30 +23,6 @@ class Bicicleta {
 	}
 }
 
-
-object farolito {
-	method peso(){return 0.5}
-	method carga(){return 0}
-	method luminoso(){return true}
-}
-
-class Canasto {
-	var volumen
-	method ingresarVolumen(vol){volumen = vol}
-	method peso(){return volumen/10}
-	method carga(){return volumen * 2}
-	method luminoso(){return false}
-}
-
-class MorralDeBici{
-	var property largo
-	var ojoDeGato
-	method poseeOjoDeGato(siono){ojoDeGato = siono}
-	method peso(){return 1.2}
-	method carga(){return self.largo()/3}
-	method luminoso(){return ojoDeGato}
-
-}
 // RESPUESTA A LA PREGUNTA:
 //Para poder agregar nuevos tipos de accesorios, es necesario
 //crear un objeto o clase que hagan referencia a estos y

@@ -1,4 +1,5 @@
 import bicicletas.*
+import accesorios.*
 test "prueba de bicis" {
 	
 	const bici1 = new Bicicleta()
